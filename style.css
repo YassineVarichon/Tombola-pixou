@@ -2,17 +2,17 @@
    DESIGN SYSTEM & VARIABLES
    ========================================================================== */
 :root {
-    --primary: #dc2626; /* Pixou Red */
-    --primary-hover: #b91c1c;
-    --primary-glow: rgba(220, 38, 38, 0.15);
-    --dark: #0f172a; /* Slate 900 */
-    --dark-muted: #334155; /* Slate 700 */
-    --light: #ffffff;
-    --bg-light: #f8fafc; /* Slate 50 */
+    --primary: #F52740; /* Pixou Brand Red */
+    --primary-hover: #B81D30; /* Gradient Dark Red */
+    --primary-glow: rgba(245, 39, 64, 0.15);
+    --dark: #1C1C1C; /* Brand Charcoal Black */
+    --dark-muted: #514D4C; /* Brand Dark Gray */
+    --light: #FFFFFF;
+    --bg-light: #F7F7F7; /* Brand Light Gray */
     --bg-card: rgba(255, 255, 255, 0.75);
     
-    --border: rgba(15, 23, 42, 0.08);
-    --border-hover: rgba(220, 38, 38, 0.2);
+    --border: rgba(28, 28, 28, 0.08);
+    --border-hover: rgba(245, 39, 64, 0.2);
     
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
@@ -21,9 +21,9 @@
     --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-medium: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     
-    --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.04);
-    --shadow-medium: 0 20px 40px rgba(15, 23, 42, 0.08);
-    --shadow-glow: 0 0 30px rgba(220, 38, 38, 0.15);
+    --shadow-soft: 0 10px 30px rgba(28, 28, 28, 0.04);
+    --shadow-medium: 0 20px 40px rgba(28, 28, 28, 0.08);
+    --shadow-glow: 0 0 30px rgba(245, 39, 64, 0.15);
     
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -236,32 +236,31 @@ h1, h2, h3, h4 {
 }
 
 .event-title {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4.2rem;
+    font-weight: 400;
     line-height: 0.95;
     color: var(--primary);
     text-transform: uppercase;
-    letter-spacing: -2px;
-    margin-bottom: 12px;
-    background: linear-gradient(135deg, var(--primary) 0%, #ef4444 50%, #f97316 100%);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 12px rgba(220, 38, 38, 0.08));
+    filter: drop-shadow(0 4px 12px rgba(245, 39, 64, 0.1));
     display: inline-block;
 }
 
 .event-subtitle {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 2.8rem;
-    font-weight: 400;
-    color: #0f172a;
-    letter-spacing: 2px;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--dark);
+    letter-spacing: -1px;
     text-transform: uppercase;
     margin-top: -5px;
     margin-bottom: 30px;
     display: inline-block;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8), -2px -2px 0 rgba(255, 255, 255, 0.8);
 }
 
 .brand-decor {

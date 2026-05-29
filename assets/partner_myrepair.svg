@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="130" rx="16" fill="#FFFFFF" />
+  
+  <!-- Graphic: Scooter Icon -->
+  <g transform="translate(140, 20)">
+    <!-- Speed Lines (Teal) -->
+    <line x1="10" y1="12" x2="40" y2="12" stroke="#00A88F" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="5" y1="24" x2="45" y2="24" stroke="#00A88F" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="0" y1="36" x2="35" y2="36" stroke="#00A88F" stroke-width="4.5" stroke-linecap="round" />
+    
+    <!-- Scooter Body (Black) -->
+    <!-- Handlebar & Stem -->
+    <path d="M72,12 L84,12 M80,12 L80,48 L48,48" stroke="#1C1C1C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Rear fender/arch -->
+    <path d="M5,48 A15,15 0 0,1 25,35 L40,48" stroke="#1C1C1C" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    
+    <!-- Wheels -->
+    <circle cx="15" cy="48" r="9" stroke="#1C1C1C" stroke-width="4.5" fill="#FFFFFF" />
+    <circle cx="80" cy="48" r="9" stroke="#1C1C1C" stroke-width="4.5" fill="#FFFFFF" />
+  </g>
+  
+  <!-- Logo Text -->
+  <g transform="translate(45, 102)">
+    <text font-family="'Montserrat', 'Helvetica Neue', 'Arial', sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">
+      <tspan fill="#1C1C1C">MY </tspan>
+      <tspan fill="#00A88F">REPAIR</tspan>
+    </text>
+  </g>
+</svg>

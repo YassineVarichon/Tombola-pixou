@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="130" rx="16" fill="#F1C296" />
+  
+  <!-- Logo Text -->
+  <text x="25" y="80" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="52" font-weight="700" fill="#1C1C1C" letter-spacing="1">DAKOTA</text>
+  
+  <!-- Underline and Accent -->
+  <line x1="25" y1="92" x2="280" y2="92" stroke="#1C1C1C" stroke-width="2" />
+  <line x1="25" y1="28" x2="280" y2="28" stroke="#1C1C1C" stroke-width="1.5" />
+  <circle cx="20" cy="92" r="3" fill="#1C1C1C" />
+  <circle cx="10" cy="92" r="3" fill="#1C1C1C" />
+  
+  <!-- Tuareg Graphic on the right -->
+  <g transform="translate(295, 20)">
+    <!-- Orange circle -->
+    <circle cx="45" cy="45" r="40" fill="#F47B20" />
+    
+    <!-- Tuareg face silhouette with turban -->
+    <path d="M45,15 C55,15 62,22 64,30 C66,38 68,42 66,50 C64,58 60,65 52,70 C48,73 40,75 35,75 L30,70 L35,62 L32,58 L28,60 C26,50 28,40 32,30 C36,20 40,15 45,15 Z" fill="#1C1C1C" opacity="0.15" />
+    
+    <!-- Detailed turban drawing outline in black -->
+    <path d="M45,15 C41,15 36,18 33,23 C31,26 31,30 33,33 C34,35 37,36 39,35 C42,34 45,31 47,27 C49,23 48,18 45,15 Z" fill="#1C1C1C" />
+    <path d="M37,28 C34,30 30,35 28,40 C26,45 27,51 31,54 C33,56 36,55 38,52 C40,49 40,44 38,38 L37,28 Z" fill="#1C1C1C" />
+    <path d="M31,48 C28,52 26,58 27,64 C28,70 32,73 37,73 C42,73 47,70 51,65 C55,60 58,54 59,48 C60,42 59,38 56,36 C52,38 48,42 45,47 C42,52 38,58 35,62 C32,60 30,55 31,48 Z" fill="#1C1C1C" />
+    <!-- Turban wraps -->
+    <path d="M45,15 C52,16 58,20 62,25 M48,22 C54,23 59,27 63,32 M51,28 C56,30 60,34 64,40 M54,35 C58,38 62,42 65,48" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" fill="none" />
+    <!-- Hanging veil -->
+    <path d="M31,54 C28,58 26,65 29,72 C32,79 38,82 44,80 C48,78 50,72 50,66" stroke="#1C1C1C" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+</svg>
