@@ -788,6 +788,7 @@ h1, h2, h3, h4 {
     max-width: 100%;
     max-height: 160px;
     object-fit: contain;
+    mix-blend-mode: multiply; /* Removes any solid white background so image blends transparently */
     transition: var(--transition-medium);
 }
 
