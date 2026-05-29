@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <!-- Cylindrical towers in Nanterre Cité Pablo Picasso -->
+  
+  <!-- Tower 3 (Back Right) -->
+  <g transform="translate(240, 150)">
+    <!-- Tower Body -->
+    <path d="M10,0 L70,0 L70,350 L10,350 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M10,0 C20,-10 60,-10 70,0" fill="none" stroke="#CBD5E1" stroke-width="1.5" />
+    
+    <!-- Mosaic organic shapes (Clouds) -->
+    <path d="M15,40 Q30,25 45,40 T75,40" fill="#93C5FD" opacity="0.3" />
+    <path d="M10,120 Q35,90 55,120 T70,140" fill="#A7F3D0" opacity="0.25" />
+    <path d="M20,220 Q40,200 60,220" fill="#FDE047" opacity="0.2" />
+    
+    <!-- Round circular windows -->
+    <circle cx="25" cy="50" r="4" fill="#64748B" />
+    <circle cx="55" cy="50" r="4" fill="#64748B" />
+    <circle cx="25" cy="90" r="4" fill="#64748B" />
+    <circle cx="55" cy="90" r="4" fill="#64748B" />
+    <circle cx="25" cy="130" r="4" fill="#64748B" />
+    <circle cx="55" cy="130" r="4" fill="#64748B" />
+    <circle cx="25" cy="170" r="4" fill="#64748B" />
+    <circle cx="55" cy="170" r="4" fill="#64748B" />
+    <circle cx="25" cy="210" r="4" fill="#64748B" />
+    <circle cx="55" cy="210" r="4" fill="#64748B" />
+    <circle cx="25" cy="250" r="4" fill="#64748B" />
+    <circle cx="55" cy="250" r="4" fill="#64748B" />
+  </g>
+
+  <!-- Tower 1 (Main Central cylindrical tower) -->
+  <g transform="translate(100, 60)">
+    <!-- Tower Body -->
+    <rect x="0" y="0" width="110" height="440" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2" />
+    <!-- Curved top -->
+    <path d="M0,0 C20,-15 90,-15 110,0" fill="none" stroke="#94A3B8" stroke-width="2" />
+    
+    <!-- Cloud-like mosaic shapes on facade (cylindrical aspect) -->
+    <path d="M10,60 C30,30 80,30 100,60" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3,3" />
+    <path d="M15,90 C35,70 75,70 95,90" fill="#93C5FD" opacity="0.4" />
+    <path d="M20,180 C40,150 80,150 100,180" fill="#FCA5A5" opacity="0.3" />
+    <path d="M5,280 C35,250 85,250 105,280" fill="#C084FC" opacity="0.3" />
+    <path d="M15,360 C45,330 75,330 95,360" fill="#FDE047" opacity="0.25" />
+
+    <!-- Round circular windows characteristic of Tours Aillaud -->
+    <!-- Row 1 -->
+    <circle cx="25" cy="40" r="6" fill="#475569" />
+    <circle cx="55" cy="40" r="6" fill="#475569" />
+    <circle cx="85" cy="40" r="6" fill="#475569" />
+    <!-- Row 2 -->
+    <circle cx="25" cy="80" r="6" fill="#475569" />
+    <circle cx="55" cy="80" r="6" fill="#475569" />
+    <circle cx="85" cy="80" r="6" fill="#475569" />
+    <!-- Row 3 -->
+    <circle cx="25" cy="120" r="6" fill="#475569" />
+    <circle cx="55" cy="120" r="6" fill="#475569" />
+    <circle cx="85" cy="120" r="6" fill="#475569" />
+    <!-- Row 4 -->
+    <circle cx="25" cy="160" r="6" fill="#475569" />
+    <circle cx="55" cy="160" r="6" fill="#475569" />
+    <circle cx="85" cy="160" r="6" fill="#475569" />
+    <!-- Row 5 -->
+    <circle cx="25" cy="200" r="6" fill="#475569" />
+    <circle cx="55" cy="200" r="6" fill="#475569" />
+    <circle cx="85" cy="200" r="6" fill="#475569" />
+    <!-- Row 6 -->
+    <circle cx="25" cy="240" r="6" fill="#475569" />
+    <circle cx="55" cy="240" r="6" fill="#475569" />
+    <circle cx="85" cy="240" r="6" fill="#475569" />
+    <!-- Row 7 -->
+    <circle cx="25" cy="280" r="6" fill="#475569" />
+    <circle cx="55" cy="280" r="6" fill="#475569" />
+    <circle cx="85" cy="280" r="6" fill="#475569" />
+    <!-- Row 8 -->
+    <circle cx="25" cy="320" r="6" fill="#475569" />
+    <circle cx="55" cy="320" r="6" fill="#475569" />
+    <circle cx="85" cy="320" r="6" fill="#475569" />
+    <!-- Row 9 -->
+    <circle cx="25" cy="360" r="6" fill="#475569" />
+    <circle cx="55" cy="360" r="6" fill="#475569" />
+    <circle cx="85" cy="360" r="6" fill="#475569" />
+    <!-- Row 10 -->
+    <circle cx="25" cy="400" r="6" fill="#475569" />
+    <circle cx="55" cy="400" r="6" fill="#475569" />
+    <circle cx="85" cy="400" r="6" fill="#475569" />
+  </g>
+
+  <!-- Tower 2 (Left cylindrical tower) -->
+  <g transform="translate(30, 110)">
+    <!-- Tower Body -->
+    <rect x="0" y="0" width="80" height="390" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" />
+    <path d="M0,0 C15,-8 65,-8 80,0" fill="none" stroke="#94A3B8" stroke-width="1.5" />
+    
+    <!-- Facade shapes -->
+    <path d="M10,80 Q40,50 70,80" fill="#C084FC" opacity="0.25" />
+    <path d="M5,180 Q35,150 75,180" fill="#A7F3D0" opacity="0.3" />
+    <path d="M15,280 Q40,250 65,280" fill="#93C5FD" opacity="0.3" />
+
+    <!-- Round windows -->
+    <circle cx="25" cy="50" r="5" fill="#475569" />
+    <circle cx="55" cy="50" r="5" fill="#475569" />
+    <circle cx="25" cy="100" r="5" fill="#475569" />
+    <circle cx="55" cy="100" r="5" fill="#475569" />
+    <circle cx="25" cy="150" r="5" fill="#475569" />
+    <circle cx="55" cy="150" r="5" fill="#475569" />
+    <circle cx="25" cy="200" r="5" fill="#475569" />
+    <circle cx="55" cy="200" r="5" fill="#475569" />
+    <circle cx="25" cy="250" r="5" fill="#475569" />
+    <circle cx="55" cy="250" r="5" fill="#475569" />
+    <circle cx="25" cy="300" r="5" fill="#475569" />
+    <circle cx="55" cy="300" r="5" fill="#475569" />
+    <circle cx="25" cy="350" r="5" fill="#475569" />
+    <circle cx="55" cy="350" r="5" fill="#475569" />
+  </g>
+</svg>
