@@ -2048,4 +2048,112 @@ footer {
     text-shadow: 0 0 20px rgba(220, 38, 38, 0.15);
 }
 
+/* ==========================================================================
+   LIQUID iOS GLASSMORPHIC COUNTDOWN WIDGET
+   ========================================================================== */
+.countdown-widget {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px) saturate(190%);
+    -webkit-backdrop-filter: blur(20px) saturate(190%);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin: 25px 0 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: floatAnimation 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.countdown-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), #f59e0b);
+}
+
+.countdown-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    font-family: 'Lemon MILK', 'Arial Pro', sans-serif;
+    opacity: 0.9;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 65px;
+}
+
+.time-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    font-family: 'Lemon MILK', 'Arial Pro', monospace;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.time-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--dark-muted);
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-family: 'Arial Pro', 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.time-separator {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 12px;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0.3; }
+}
+
+/* ==========================================================================
+   SURPRISE PRIZE CARDS STYLES
+   ========================================================================== */
+.prize-card.surprise {
+    border: 2px dashed rgba(245, 158, 11, 0.4);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 158, 11, 0.02) 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prize-card.surprise:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.12);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.highlight-surprise {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
 
