@@ -186,8 +186,8 @@ h1, h2, h3, h4 {
     margin-top: 80px;
     position: relative;
     width: 100%;
-    height: 250px;
-    background: var(--light);
+    height: 180px;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     overflow: hidden;
     border-bottom: 1px solid var(--border);
 }
@@ -204,7 +204,7 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 38%; /* Perfect focus on the cloud towers */
+    object-position: bottom center;
     opacity: 1;
     transition: var(--transition-medium);
 }
