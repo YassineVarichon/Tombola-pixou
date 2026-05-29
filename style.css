@@ -14,8 +14,8 @@
     --border: rgba(28, 28, 28, 0.08);
     --border-hover: rgba(245, 39, 64, 0.2);
     
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Outfit', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Arial', sans-serif;
     --font-handwritten: 'Playpen Sans', cursive;
     
     --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -769,8 +769,7 @@ h1, h2, h3, h4 {
     color: var(--dark-muted);
     line-height: 1.5;
     margin-bottom: 20px;
-    height: 54px;
-    overflow: hidden;
+    min-height: 68px;
 }
 
 .prize-value {
