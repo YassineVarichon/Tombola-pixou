@@ -99,8 +99,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const now = new Date();
                 const dateTimeStr = now.toLocaleDateString('fr-FR') + ' ' + now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
-                // Generate random unique ticket number
-                const ticketNum = Math.floor(10000 + Math.random() * 90000);
+                // Retrieve participants from LocalStorage to ensure unique ticket number
+                let participants = JSON.parse(localStorage.getItem('pixou_tombola_participants')) || [];
+
+                // Generate random unique ticket number between 1 and 2000 without duplicates
+                let ticketNum;
+                let attempts = 0;
+                do {
+                    ticketNum = Math.floor(Math.random() * 2000) + 1;
+                    attempts++;
+                } while (participants.some(p => p.ticket === ticketNum) && attempts < 2000);
 
                 const participant = {
                     ticket: ticketNum,
@@ -111,9 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     date: dateTimeStr,
                     timestamp: now.getTime()
                 };
-
-                // Retrieve and push to LocalStorage
-                let participants = JSON.parse(localStorage.getItem('pixou_tombola_participants')) || [];
                 
                 // Check if phone already registered (optional limit)
                 const alreadyExists = participants.some(p => p.telephone.replace(/\s/g, '') === rawPhone);

@@ -204,7 +204,7 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 52%; /* Panned down beautifully to show more of the towers and trees */
+    object-position: center 10%; /* Center perfectly to show the custom header title text at the top */
     opacity: 1;
     transition: var(--transition-medium);
 }
@@ -2104,12 +2104,9 @@ footer {
 .time-number {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--text-dark);
+    color: var(--primary); /* Solid premium red color to guarantee perfect cross-device visibility */
     font-family: 'Lemon MILK', 'Arial Pro', monospace;
     line-height: 1;
-    background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .time-label {
@@ -2151,6 +2148,10 @@ footer {
     letter-spacing: 0.03em;
     box-shadow: 0 4px 15px rgba(245, 158, 11, 0.05);
     text-transform: uppercase;
+    text-align: center; /* Center the text lines when wrapped */
+    max-width: 90%; /* Responsive layout control */
+    margin-left: auto;
+    margin-right: auto;
     animation: pulseGlow 3s ease-in-out infinite;
 }
 
