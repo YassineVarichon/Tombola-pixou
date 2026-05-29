@@ -186,8 +186,8 @@ h1, h2, h3, h4 {
     margin-top: 80px;
     position: relative;
     width: 100%;
-    height: 180px;
-    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    height: 250px; /* Enhanced height to showcase the gorgeous towers */
+    background: var(--light);
     overflow: hidden;
     border-bottom: 1px solid var(--border);
 }
@@ -204,7 +204,14 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: bottom center;
+    object-position: center 40%; /* Focus beautifully on the cloud towers */
+    opacity: 0.95;
+    
+    /* Ultimate fading linear gradient mask (blends top and bottom seamlessly) */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    transition: var(--transition-medium);
 }
 
 /* ==========================================================================
