@@ -1,0 +1,112 @@
+==========================================================================
+📊 GUIDE D'INTÉGRATION GOOGLE SHEETS & TIRAGE AU SORT (PIXOU TOMBOLA)
+==========================================================================
+
+Pour votre Tombola Pixou Phone, vous disposez de deux méthodes complémentaires extrêmement simples pour gérer les données et désigner le gagnant final !
+
+--------------------------------------------------------------------------
+⚡ MÉTHODE 1 : INTÉGRATION GOOGLE SHEETS EN TEMPS RÉEL (RECOMMANDÉ)
+--------------------------------------------------------------------------
+
+Cette méthode permet d'enregistrer instantanément chaque participation soumise sur le site web directement dans les colonnes de votre Google Sheet en temps réel, sans aucune action de votre part !
+
+1. COLLER LE SCRIPT SUR GOOGLE SHEET :
+   a. Ouvrez votre document Google Sheet "Tirage au sort".
+   b. Cliquez sur l'onglet "Extensions" -> "Apps Script" dans la barre d'outils.
+   c. Supprimez tout le code par défaut et collez le script ci-dessous :
+
+--- CODE GOOGLE APPS SCRIPT À COLLER ---
+// 1. ENREGISTREMENT EN DIRECT DES INSCRIPTIONS DEPUIS LE SITE WEB
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  
+  try {
+    var data = JSON.parse(e.postData.contents);
+    
+    // Ajoute la ligne avec la structure demandée
+    // Col A: Prénom, Col B: Nom, Col C: Adresse mail, Col D: Téléphone, Col E: Chiffre de tirage au sort (Ticket)
+    sheet.appendRow([
+      data.prenom,
+      data.nom,
+      data.email,
+      data.telephone,
+      "#" + data.ticket
+    ]);
+    
+    return ContentService.createTextOutput(JSON.stringify({ "status": "success", "message": "Participant ajouté !" }))
+                         .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ "status": "error", "message": err.toString() }))
+                         .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// 2. CRÉATION DU MENU DE TIRAGE AU SORT DANS L'OUTIL GOOGLE SHEET
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  ui.createMenu('🎁 Pixou Tombola')
+    .addItem('🎉 Effectuer le tirage au sort !', 'tirerAuSortGagnant')
+    .addToUi();
+}
+
+function tirerAuSortGagnant() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var lastRow = sheet.getLastRow();
+  
+  if (lastRow < 2) {
+    SpreadsheetApp.getUi().alert("❌ Erreur : Aucun participant inscrit pour le moment.");
+    return;
+  }
+  
+  var range = sheet.getRange(2, 1, lastRow - 1, 5);
+  var values = range.getValues();
+  
+  var randomIndex = Math.floor(Math.random() * values.length);
+  var winner = values[randomIndex];
+  
+  var prenom = winner[0];
+  var nom = winner[1];
+  var email = winner[2];
+  var telephone = winner[3];
+  var ticket = winner[4];
+  
+  var ui = SpreadsheetApp.getUi();
+  ui.alert(
+    "🏆 LE GAGNANT DU TIRAGE AU SORT EST :\n\n" +
+    "👤 Prénom : " + prenom + "\n" +
+    "🏷️ Nom : " + nom + "\n" +
+    "🎫 Numéro de ticket : " + ticket + "\n" +
+    "📞 Téléphone : " + telephone + "\n" +
+    "📧 E-mail : " + email + "\n\n" +
+    "⚠️ Présence obligatoire au stade Jean Guimier !"
+  );
+}
+----------------------------------------
+
+2. DÉPLOYER L'APPLICATION WEB GOOGLE SHEETS :
+   a. En haut à droite de l'écran Apps Script, cliquez sur le bouton bleu "Déployer" -> "Nouveau déploiement".
+   b. Cliquez sur l'engrenage à côté de "Sélectionner le type" et choisissez "Application Web".
+   c. Remplissez les paramètres suivants :
+      - Description : Inscription Pixou Tombola
+      - Exécuter en tant que : Moi (votre adresse email)
+      - Qui a accès : Tout le monde (indispensable)
+   d. Cliquez sur "Déployer".
+   e. Cliquez sur "Autoriser les accès", sélectionnez votre compte Google, puis cliquez sur "Paramètres avancés" (en petit bas) -> "Accéder à Projet sans titre (non sécurisé)" et validez.
+   f. Copiez l'URL de l'application web fournie à la fin (se termine par "/exec").
+
+3. CONNECTER VOTRE SITE WEB À L'URL GOOGLE SHEETS :
+   Pour envoyer vos formulaires en direct vers cette sheet, il vous suffit de modifier le script "script.js" pour y rajouter l'URL de votre application web. (Nous pouvons le faire ensemble dès que vous m'aurez partagé votre URL !).
+
+
+--------------------------------------------------------------------------
+🐍 MÉTHODE 2 : LANCEMENT DU TIRAGE AU SORT LOCALEMENT (PYTHON)
+--------------------------------------------------------------------------
+
+Le script "tirage.py" a été créé directement sur votre bureau dans le dossier "tombola_pixou" !
+
+COMMENT LE LANCER :
+1. Téléchargez le fichier CSV depuis le panneau d'administration secret (5 clics sur le texte de copyright en bas de page).
+2. Déplacez le fichier CSV téléchargé dans le même dossier que le script "tirage.py".
+3. Ouvrez un terminal dans ce dossier et tapez :
+   python3 tirage.py
+4. Appuyez sur ENTRÉE pour lancer l'animation de tirage à suspense avec le compte à rebours et l'affichage du gagnant !

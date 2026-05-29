@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Social Media Preview -->
+    <title>Grand Tirage au Sort | Tombola Pixou Phone Nanterre 🎁</title>
+    <meta name="description"
+        content="Participez en quelques secondes à la grande tombola organisée par Pixou Phone Nanterre ! De nombreux lots exceptionnels à gagner : iPhone 16 Pro Max, iPad, et bien plus encore !">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Grand Tirage au Sort | Tombola Pixou Phone Nanterre 🎁">
+    <meta property="og:description" content="Tentez votre chance pour remporter des lots de folie avec Pixou Phone Nanterre. Inscription gratuite et rapide !">
+    <meta property="og:image" content="assets/logo_pixou.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Playpen+Sans:wght@600&family=Rubik+Mono+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Liquid Morphing Background Blobs -->
+    <div class="liquid-background">
+        <div class="liquid-blob blob-red"></div>
+        <div class="liquid-blob blob-orange"></div>
+        <div class="liquid-blob blob-cyan"></div>
+        <div class="liquid-blob blob-white"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="assets/pixou_logo.jpg" alt="Pixou Phone Logo" class="logo-img">
+            </div>
+            <div class="nav-actions">
+                <a href="#lots" class="nav-link">Lots à gagner</a>
+                <a href="#partenaires" class="nav-link">Partenaires</a>
+                <a href="#participer" class="btn-nav">Je participe 🎟️</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Skyline Graphic -->
+    <header class="skyline-header">
+        <div class="skyline-illustration">
+            <img src="assets/skyline_nanterre.webp" alt="Skyline Nanterre" class="skyline-img">
+        </div>
+    </header>
+
+    <!-- Hero / Main Form Section -->
+    <section id="participer" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Branding Header -->
+                <div class="hero-content">
+                    <h1 class="event-title">LA TOMBOLAAA!!</h1>
+                    <span class="event-subtitle">NANTERRE</span>
+                    <div class="brand-decor">
+                        <span class="decor-circle"></span>
+                    </div>
+                    <h2>Participez en quelques secondes !</h2>
+                    <p class="hero-subtitle">Tentez de remporter le tout nouvel iPhone 17 et de nombreux autres lots d'exception.</p>
+                    
+                    <!-- Liquid Glass iOS Notification Alert Banner -->
+                    <div class="ios-alert-banner">
+                        <div class="alert-icon-wrapper">
+                            <div class="alert-pulse-dot"></div>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="alert-details">
+                            <h3>🚨 Tirage au sort en direct</h3>
+                            <p>Le tirage aura lieu à <strong>17h00</strong> précises au <strong>Stade Jean Guimier</strong>.</p>
+                            <p class="alert-attention">⚠️ <strong>Présence obligatoire</strong> sur place pour la récupération des lots !</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="form-wrapper">
+                    <div class="form-card">
+                        <form id="tombola-form">
+                            <!-- Anti-spam & metadata -->
+                            <input type="hidden" name="source" value="Pixou Tombola Web">
+                            
+                            <!-- Input Prénom -->
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fa-regular fa-user"></i></span>
+                                <input type="text" id="firstname" name="prenom" placeholder="Votre prénom *" required autocomplete="given-name">
+                            </div>
+
+                            <!-- Input Nom -->
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fa-regular fa-id-card"></i></span>
+                                <input type="text" id="lastname" name="nom" placeholder="Votre nom *" required autocomplete="family-name">
+                            </div>
+
+                            <!-- Input E-mail -->
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+                                <input type="email" id="email" name="email" placeholder="Votre adresse e-mail *" required autocomplete="email">
+                            </div>
+
+                            <!-- Input Téléphone -->
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fa-solid fa-phone"></i></span>
+                                <input type="tel" id="phone" name="telephone" placeholder="Votre numéro de téléphone *" required autocomplete="tel">
+                            </div>
+
+                            <!-- Checkbox Règlement -->
+                            <div class="checkbox-group">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" id="accept-rules" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">J'accepte le <a href="#" id="btn-rules" class="text-link">règlement</a> de la tombola *</span>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-submit" id="submit-button">
+                                <span>VALIDER MA PARTICIPATION</span>
+                                <i class="fa-solid fa-chevron-right btn-arrow"></i>
+                            </button>
+                        </form>
+
+                        <p class="form-footer">
+                            <i class="fa-solid fa-lock"></i> Vos données sont 100% sécurisées et confidentielles.
+                        </p>
+                    </div>
+
+                    <!-- Success State (Hidden by default) -->
+                    <div class="success-card id-success-card" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3>Participation Validée ! 🎉</h3>
+                        <p>Merci <strong id="user-display-name"></strong> ! Votre participation a bien été enregistrée pour le tirage au sort.</p>
+                        
+                        <!-- Premium Liquid Ticket Box -->
+                        <div class="ticket-box">
+                            <span class="ticket-label">VOTRE NUMÉRO DE TICKET</span>
+                            <div class="ticket-number-wrapper">
+                                <span class="ticket-hash">#</span>
+                                <strong id="user-ticket-number" class="ticket-number">-----</strong>
+                            </div>
+                        </div>
+
+                        <p class="success-details">Prenez une capture d'écran de ce ticket ! Présence obligatoire au stade Jean Guimier à 17h00. 📱</p>
+                        <button type="button" class="btn-reset" id="btn-another-participation">
+                            <span>Nouvelle inscription</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section id="lots" class="section prizes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fa-solid fa-chevron-right section-arrow"></i> DES LOTS EXCEPTIONNELS <i class="fa-solid fa-chevron-left section-arrow"></i></h2>
+                <p class="section-subtitle">à gagner !</p>
+            </div>
+
+            <!-- Prizes Grid -->
+            <div class="prizes-grid">
+                <!-- Lot 1: iPhone 17 -->
+                <div class="prize-card premium">
+                    <div class="prize-badge highlight">Gros Lot 🏆</div>
+                    <div class="prize-image-container">
+                        <img src="assets/lot_iphone17.webp" alt="iPhone 17" class="prize-img">
+                    </div>
+                    <div class="prize-info">
+                        <h3>iPhone 17</h3>
+                        <p class="prize-desc">Le smartphone du futur avec écran révolutionnaire et capteurs photographiques de pointe.</p>
+                        <div class="prize-value">Valeur : 1 479 €</div>
+                    </div>
+                </div>
+
+                <!-- Lot 2: iPad 10 -->
+                <div class="prize-card">
+                    <div class="prize-image-container">
+                        <img src="assets/lot_ipad.webp" alt="iPad 10e Génération" class="prize-img">
+                    </div>
+                    <div class="prize-info">
+                        <h3>iPad 10e Génération</h3>
+                        <p class="prize-desc">Design tout écran coloré, polyvalent et ultra-performant pour créer et travailler.</p>
+                        <div class="prize-value">Valeur : 439 €</div>
+                    </div>
+                </div>
+
+                <!-- Lot 3: Samsung A16 -->
+                <div class="prize-card">
+                    <div class="prize-image-container">
+                        <img src="assets/lot_samsung.webp" alt="Samsung A16" class="prize-img">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Samsung A16</h3>
+                        <p class="prize-desc">Grand écran fluide, triple capteur photo polyvalent et autonomie record de 5000 mAh.</p>
+                        <div class="prize-value">Valeur : 229 €</div>
+                    </div>
+                </div>
+
+                <!-- Lot 4: Tab A7 Lite -->
+                <div class="prize-card">
+                    <div class="prize-image-container">
+                        <img src="assets/lot_tab.webp" alt="Tab A7 Lite" class="prize-img">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Tab A7 Lite</h3>
+                        <p class="prize-desc">La tablette compacte et légère, idéale pour regarder des films et surfer sur le web en mobilité.</p>
+                        <div class="prize-value">Valeur : 159 €</div>
+                    </div>
+                </div>
+
+                <!-- Lot 5: AirPods 3 -->
+                <div class="prize-card">
+                    <div class="prize-image-container">
+                        <img src="assets/lot_airpods.webp" alt="AirPods 3" class="prize-img">
+                    </div>
+                    <div class="prize-info">
+                        <h3>AirPods 3</h3>
+                        <p class="prize-desc">Audio spatial personnalisé, autonomie accrue et résistance à l'eau et à la transpiration.</p>
+                        <div class="prize-value">Valeur : 199 €</div>
+                    </div>
+                </div>
+
+                <!-- Lot 6: Ray-Ban Meta -->
+                <div class="prize-card">
+                    <div class="prize-image-container">
+                        <img src="assets/lot_rayban.webp" alt="Ray-Ban Meta" class="prize-img">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Ray-Ban Meta</h3>
+                        <p class="prize-desc">Lunettes connectées haut de gamme avec caméra intégrée, audio haute fidélité et IA vocale.</p>
+                        <div class="prize-value">Valeur : 329 €</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prizes-action">
+                <a href="#participer" class="btn-submit pulse-cta">
+                    <span>JE PARTICIPE</span>
+                    <i class="fa-solid fa-chevron-right btn-arrow"></i>
+                </a>
+                <p class="form-footer mt-15"><i class="fa-solid fa-lock"></i> Inscription gratuite sans obligation d'achat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partenaires" class="section partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="partners-title">Avec la participation de</h2>
+            </div>
+
+            <!-- Infinite Scrolling Marquee -->
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Set 1 -->
+                    <div class="partner-card"><img src="assets/partner_pixou.jpg" alt="Pixou Phone" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_ptit_sucre.jpg" alt="Le P'tit Sucré" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_baba_pizza.jpg" alt="Baba Pizza" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_mairie_nanterre.jpg" alt="Mairie de Nanterre" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_hauts_de_seine_habitat.jpg" alt="Hauts-de-Seine Habitat" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_nanterre_coop_habitat.jpg" alt="Nanterre Coop' Habitat" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_nouvomonde.jpg" alt="Nouvomonde" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_dasa.jpg" alt="DASA" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_vm_cars.jpg" alt="VM Cars" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_authenti_cite.png" alt="Authenti Cité" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_dunant_cars.png" alt="Dunant Cars" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_dream_pizza.png" alt="Dream Pizza & Burger" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_barberstreet_235.jpg" alt="235th Barberstreet" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_nettyclean.jpg" alt="NettyClean Services" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_the_barber.jpg" alt="The Barber by Lacrim" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_la_connexion.jpg" alt="La Connexion BJJ" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_la_napolitaine.png" alt="La Napolitaine" class="partner-img"></div>
+                    
+                    <!-- Duplicated Set 2 for seamless loop -->
+                    <div class="partner-card"><img src="assets/partner_pixou.jpg" alt="Pixou Phone" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_ptit_sucre.jpg" alt="Le P'tit Sucré" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_baba_pizza.jpg" alt="Baba Pizza" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_mairie_nanterre.jpg" alt="Mairie de Nanterre" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_hauts_de_seine_habitat.jpg" alt="Hauts-de-Seine Habitat" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_nanterre_coop_habitat.jpg" alt="Nanterre Coop' Habitat" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_nouvomonde.jpg" alt="Nouvomonde" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_dasa.jpg" alt="DASA" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_vm_cars.jpg" alt="VM Cars" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_authenti_cite.png" alt="Authenti Cité" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_dunant_cars.png" alt="Dunant Cars" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_dream_pizza.png" alt="Dream Pizza & Burger" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_barberstreet_235.jpg" alt="235th Barberstreet" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_nettyclean.jpg" alt="NettyClean Services" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_the_barber.jpg" alt="The Barber by Lacrim" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_la_connexion.jpg" alt="La Connexion BJJ" class="partner-img"></div>
+                    <div class="partner-card"><img src="assets/partner_la_napolitaine.png" alt="La Napolitaine" class="partner-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p id="copyright-text">* Le règlement est disponible sur simple demande et sur la page d'accueil.</p>
+            <p class="admin-hint">Fait avec passion pour Pixou Phone Nanterre 📱</p>
+        </div>
+    </footer>
+
+    <!-- Rules Modal (Glassmorphism Slide-In) -->
+    <div id="rules-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2>Règlement Officiel de la Tombola 📝</h2>
+            </div>
+            <div class="modal-body">
+                <h3>1. Organisateur</h3>
+                <p>La société <strong>Pixou Phone Nanterre</strong>, spécialisée dans la réparation de téléphones d'urgence, organise un grand tirage au sort gratuit sans obligation d'achat.</p>
+
+                <h3>2. Durée du jeu & Tirage au sort</h3>
+                <p>Le jeu se déroule du 1er Juin 2026 au 30 Juin 2026 inclus. Le tirage au sort aura lieu en direct à <strong>17h00 au Stade Jean Guimier</strong>. La présence physique des participants lors du tirage est **obligatoire** pour pouvoir récupérer les lots.</p>
+
+                <h3>3. Conditions de participation</h3>
+                <p>La participation est ouverte à toute personne physique résidant en France métropolitaine. Une seule participation par numéro de téléphone est acceptée.</p>
+
+                <h3>4. Dotations (Lots mis en jeu)</h3>
+                <ul>
+                    <li><strong>1er Lot :</strong> 1x iPhone 17 (valeur : 1 479 €)</li>
+                    <li><strong>2e Lot :</strong> 1x iPad 10e Génération (valeur : 439 €)</li>
+                    <li><strong>3e Lot :</strong> 1x Lunettes connectées Ray-Ban Meta (valeur : 329 €)</li>
+                    <li><strong>4e Lot :</strong> 1x Samsung A16 (valeur : 229 €)</li>
+                    <li><strong>5e Lot :</strong> 1x AirPods 3 (valeur : 199 €)</li>
+                    <li><strong>6e Lot :</strong> 1x Tablette Tab A7 Lite (valeur : 159 €)</li>
+                </ul>
+
+                <h3>5. Désignation des gagnants</h3>
+                <p>Les gagnants seront tirés au sort aléatoirement parmi les inscrits valides. Ils seront contactés par téléphone dans un délai de 48 heures suivant le tirage.</p>
+
+                <h3>6. Protection des données (RGPD)</h3>
+                <p>Les données récoltées (Prénom, Nom, E-mail et Numéro de téléphone) sont exclusivement utilisées dans le cadre de cette tombola pour désigner et contacter les gagnants. Aucune donnée ne sera revendue ou utilisée à des fins commerciales sans accord explicite.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-submit sm" id="btn-close-rules">J'ai compris</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Admin Panel (Activated via secret interaction in script.js) -->
+    <div id="admin-panel" class="admin-panel-overlay">
+        <div class="admin-panel-content">
+            <button class="admin-panel-close" id="close-admin-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="admin-header">
+                <h2>📊 Panneau d'Administration (Secret)</h2>
+                <p>Consultez en temps réel les participants inscrits sur ce navigateur.</p>
+            </div>
+            <div class="admin-body">
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <span class="stat-num" id="total-registrations">0</span>
+                        <span class="stat-label">Inscriptions locales</span>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="participants-table">
+                        <thead>
+                            <tr>
+                                <th>Ticket</th>
+                                <th>Date / Heure</th>
+                                <th>Prénom</th>
+                                <th>Nom</th>
+                                <th>E-mail</th>
+                                <th>Téléphone</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participants-list-body">
+                            <!-- Dynamic rows -->
+                        </tbody>
+                    </table>
+                    <div id="no-participants-msg" class="empty-table-msg">
+                        Aucun participant inscrit pour le moment.
+                    </div>
+                </div>
+            </div>
+            <div class="admin-footer">
+                <button type="button" class="btn-admin-action" id="btn-export-csv">
+                    <i class="fa-solid fa-file-excel"></i> Exporter vers Excel (CSV)
+                </button>
+                <button type="button" class="btn-admin-action danger" id="btn-clear-db">
+                    <i class="fa-solid fa-trash-can"></i> Réinitialiser la liste
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
